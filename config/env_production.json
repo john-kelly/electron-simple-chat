@@ -1,4 +1,5 @@
 {
   "name": "production",
-  "description": "Add here any environment specific stuff you like."
+  "description": "Add here any environment specific stuff you like.",
+  "serverUrl": "http://safe-wave-3173.herokuapp.com/"
 }

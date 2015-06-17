@@ -19,5 +19,6 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 ## Deploying to Heroku
 
 ```
-$ git subtree push --prefix <folder> heroku master
+$ cd path/to/project/root
+$ git subtree push --prefix server heroku master
 ```
