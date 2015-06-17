@@ -1,0 +1,5 @@
+{
+  "name": "simple-chat-server",
+  "description": "Simple Chat Server.",
+  "keywords": ["node", "express", "static"]
+}
