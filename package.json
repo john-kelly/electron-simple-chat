@@ -19,5 +19,6 @@
     "release": "./node_modules/.bin/gulp release --env=production",
     "start": "./node_modules/.bin/gulp default --env=development",
     "test": "node default --env=test"
-  }
+  },
+  "dependencies": {}
 }
