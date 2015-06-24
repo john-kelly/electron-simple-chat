@@ -7,16 +7,29 @@
     <link href="./stylesheets/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <main>
+        <header>
+            <h1>Simple Chat</h1>
+        </header>
 
-    <div class="container">
-        <div>Simple Chat</div>
-    </div>
+        <!-- Login Section -->
+        <section>
+            Username:
+            <input class="js-username-input" type="text" value="">
+            <button class="js-login-button">Login</button>
+        </section>
 
+        <!-- Message Section -->
+        <section>
+            <textarea class="js-message-textarea"></textarea>
+            <button class="js-message-button">Send</button>
+            <div class="js-messages"></div>
+        </section>
+    </main>
 </body>
 
 <script src="./vendor/electron_boilerplate/context_menu.js"></script>
 <script src="./vendor/electron_boilerplate/external_links.js"></script>
 
 <script src="./index.js"></script>
-
 </html>
