@@ -5,14 +5,14 @@ var _ = require('underscore');
 
 var app = express();
 var server = http.Server(app);
-var webSocketServer = io(server);
+var ioServer = io(server);
 
 app.set('port', (process.env.PORT || 5000));
 
 // Global usernames of users in chatroom.
 var usernames = [];
 
-webSocketServer.on('connection', function(client) {
+ioServer.on('connection', function(client) {
     console.log('a client has connected');
 
     client.on('login', function(data) {
@@ -24,6 +24,11 @@ webSocketServer.on('connection', function(client) {
             usernames.push(username);
             client.emit('login:status', {status: 'ok'});
         }
+    });
+
+    client.on('chat:message', function(data) {
+        console.log(data);
+        ioServer.emit('broadcast:message', data);
     });
 });
 
